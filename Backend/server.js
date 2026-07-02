@@ -1,0 +1,47 @@
+import express from 'express';
+import session from "express-session";
+import 'dotenv/config';
+const app = express();
+const PORT=8080;
+import cors from "cors";
+import Thread from "./models/thread.js";
+import mongoose from 'mongoose';
+import threadRouter from "./routes/threads.js";
+import chatRouter from "./routes/chats.js";
+
+
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+app.use(cors({
+    origin: "http://localhost:5173", // React URL
+    credentials: true
+}));
+
+app.use(session({
+    secret: "my-secret-key",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24// 24 hour
+    }
+}));
+
+main().then((res)=>{
+    console.log("Connected to DB");
+}).catch((err)=>{
+    console.log(err);
+})
+
+async function main(){
+    await mongoose.connect(process.env.DB_LINK);
+}
+
+
+app.use("/chats",chatRouter);
+app.use("/threads",threadRouter);
+
+app.listen(PORT,()=>{
+    console.log("Listening at Port 8080");
+})
+

@@ -1,0 +1,25 @@
+.error-box{
+    width:60rem;
+    background-color:rgba(117, 117, 117, 0.3);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border:1px solid black;
+    border-radius:0.5rem;
+    margin:auto;
+    margin-top:1rem;
+    padding-left:1rem;
+    position:absolute;
+    margin-left:10rem;
+}
+.error-info{
+    display:flex;
+    align-items:center;
+}
+.error-info p{
+    padding-left:1rem;
+}
+.error-cross i{
+    margin:1rem;
+}
