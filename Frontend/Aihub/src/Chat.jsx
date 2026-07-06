@@ -18,7 +18,7 @@ export default function Chat(){
 
     const reply= async()=>{
         try{
-            const response= await fetch(`http://localhost:8080/chats`, {
+            const response= await fetch(`${import.meta.env.VITE_API_URL}/chats`, {
             method: "POST",
             credentials:"include",
             headers: {
