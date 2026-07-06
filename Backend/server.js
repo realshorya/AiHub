@@ -1,5 +1,6 @@
 import express from 'express';
 import session from "express-session";
+import MongoStore from "connect-mongo";
 import 'dotenv/config';
 const app = express();
 const PORT=8080;
@@ -18,8 +19,21 @@ app.use(cors({
     credentials: true
 }));
 
+const store = MongoStore.create({
+    mongoUrl:process.env.DB_LINK,
+    crypto:{
+        secret:process.env.SECRET,
+    },
+    touchAfter:24*3600,
+});
+
+store.on("error",()=>{
+    console.log("ERROR in MONGO SESSION STORE",err);
+})
+
 app.use(session({
-    secret: "my-secret-key",
+    store,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
