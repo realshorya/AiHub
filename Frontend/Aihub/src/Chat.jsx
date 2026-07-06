@@ -77,7 +77,7 @@ export default function Chat(){
                     <h1 className="logo-name">AiHub</h1>
                     <h1 className="logo-name-extra">{modelstatus?` - ${model}`:` - ${currmodel}`}</h1>
                 </div>
-                {modelstatus === true?
+                {modelstatus?
                 <>
                 <div className="models">
                     <select defaultValue={model} onChange={(e)=>{setModel(e.target.value)}} required>

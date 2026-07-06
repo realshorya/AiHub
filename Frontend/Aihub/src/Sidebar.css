@@ -24,6 +24,11 @@
     font-size:1.5rem;
     margin:0.8rem 1.5rem;
 }
+.name-extra{
+    display:none;
+    font-size:1.5rem;
+    margin:0.8rem 0.5rem;
+}
 .nav-close-icon{
     display:none;
 }

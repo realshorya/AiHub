@@ -18,10 +18,11 @@ export default function sidebar(){
 
     if (isLoading) return "Loading...";
     return(
-        <div className="sidebar" style={{display:show?"block":"none"}}>
+        <div className="sidebar" style={{display:show?window.innerWidth>=1000?"block":"none":"none"}}>
             <div className="head">
                 <i class="fa-solid fa-hexagon-nodes icon"></i>
                 <h1 className="name">AiHub</h1>
+                <h1 className="name-extra">{modelstatus?` - ${model}`:` - ${currmodel}`}</h1>
                 <i className="fa-solid fa-bars icon nav-close-icon" onClick={()=> setShow(!show)}></i>
             </div>
             <div className="functions">

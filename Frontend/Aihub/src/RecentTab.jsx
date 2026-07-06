@@ -4,7 +4,7 @@ import './RecentTab.css';
 
 export default function RecentTab(){
 
-    const {thread,setStatus,setCurrchat,setIdthread,setCurrmodel,setModelstatus,Message,setMessage,getThread} = useContext(MyContext);
+    const {thread,setStatus,setCurrchat,setIdthread,setCurrmodel,setModelstatus,Message,setMessage,getThread,model,setModel} = useContext(MyContext);
 
     let handlestatus=()=>{
         setStatus(true);
@@ -12,6 +12,7 @@ export default function RecentTab(){
 
     function currThread(id){
         let result = thread.find((data)=>String(data.threadId)===String(id));
+        setModel(result.model);
         setCurrmodel(result.model);
         setModelstatus(false);
         setCurrchat(result.messages);

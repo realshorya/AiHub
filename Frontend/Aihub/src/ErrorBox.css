@@ -1,5 +1,5 @@
 .error-box{
-    width:60rem;
+    width:77%;
     background-color:rgba(117, 117, 117, 0.3);
     color:white;
     display:flex;
@@ -7,11 +7,9 @@
     justify-content:space-between;
     border:1px solid black;
     border-radius:0.5rem;
-    margin:auto;
-    margin-top:1rem;
+    margin:1rem 2rem;
     padding-left:1rem;
     position:absolute;
-    margin-left:10rem;
 }
 .error-info{
     display:flex;
@@ -22,4 +20,38 @@
 }
 .error-cross i{
     margin:1rem;
+}
+@media (min-width: 1000px) and (max-width:1200px){
+    .error-box{
+        width:70%;
+        margin-left:0.6rem;
+    }
+}
+@media (min-width: 300px) and (max-width:1000px){
+    .error-box{
+        width:94%;
+        margin-left:0.6rem;
+    }
+    .error-box p{
+        font-size:70%;
+    }
+}
+@media (min-width: 750px) and (max-width:1000px){
+    .error-box p{
+        font-size:87%;
+    }
+}
+@media (min-width: 500px) and (max-width:750px){
+    .error-box p{
+        font-size:85%;
+    }
+}
+@media (min-width: 300px) and (max-width:550px){
+    .error-box{
+        width:91%;
+        margin-left:0.6rem;
+    }
+    .error-box p{
+        font-size:75%;
+    }
 }

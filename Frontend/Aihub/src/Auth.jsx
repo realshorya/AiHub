@@ -14,7 +14,8 @@ export default function App() {
         <>
           <h1 className="recent-title">Recents</h1>
           <div className="auth-box">
-          <h4>Create account for Free</h4>
+          <h1 className="name-logo">AiHub</h1>  
+          <h4 className="login-title">Create account for Free</h4>
           <div>
           {isAuthenticated ?<></>:<><button className="auth-button" onClick={signup}>Signup</button>
           <button className="auth-button" onClick={login}>Login</button></>}
