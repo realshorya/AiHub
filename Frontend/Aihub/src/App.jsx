@@ -21,7 +21,7 @@ function App() {
   let[modelstatus,setModelstatus]=useState(true);
   let[loader,setLoader]=useState(false);
   let[Message,setMessage]=useState("No error");
-  let[show,setShow]=useState(true);
+  let[show,setShow]=useState(window.innerWidth >= 1000);
 
   
   const getThread = async()=>{
@@ -78,6 +78,21 @@ function App() {
       }
     }
   },[isLoading]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1000) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="main">
       <MyContext.Provider value={providerValues}>

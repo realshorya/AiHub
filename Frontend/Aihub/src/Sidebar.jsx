@@ -15,10 +15,9 @@ export default function sidebar(){
     const logout = () =>{
         auth0Logout({ logoutParams: { returnTo: window.location.origin } });
     }
-
     if (isLoading) return "Loading...";
     return(
-        <div className="sidebar" style={{display:show?window.innerWidth>=1000?"block":"none":"none"}}>
+        <div className="sidebar" style={{display:show?"block":"none"}}>
             <div className="head">
                 <i class="fa-solid fa-hexagon-nodes icon"></i>
                 <h1 className="name">AiHub</h1>
