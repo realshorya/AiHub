@@ -15,7 +15,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use(cors({
-    origin: "http://localhost:5173", // React URL
+    origin:[
+        "http://localhost:5173", // React URL
+        "https://ai-hub-backend-swart.vercel.app/",
+    ],
     credentials: true
 }));
 
@@ -37,6 +40,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
+        secure:true,
+        sameSite:"none",
         maxAge: 1000 * 60 * 60 * 24// 24 hour
     }
 }));
