@@ -58,4 +58,7 @@ app.use("/threads",threadRouter);
 app.listen(PORT,()=>{
     console.log("Listening at Port 8080");
 })
+app.get("/", (req, res) => {
+    res.send("Backend is running");
+});
 
