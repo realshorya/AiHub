@@ -10,7 +10,7 @@ export default function Chat(){
 
     const {isLoading, isAuthenticated, error, loginWithRedirect: login, logout: auth0Logout, user} = useAuth0();
     const {currchat,idthread,status,setChats,query,setQuery,chats,model,setModel,currmodel,setCurrmodel,
-        modelstatus,setModelstatus,setLoader,Message,setMessage,setStatus,getThread,setShow,show} = useContext(MyContext);
+        modelstatus,setModelstatus,setLoader,Message,setMessage,setStatus,getThread,setShow,show,setReply} = useContext(MyContext);
 
     useEffect(()=>{
         setChats(currchat);
@@ -36,6 +36,7 @@ export default function Chat(){
                 return setMessage(resChat.error);
             }
             setLoader(false);
+            setReply(resChat.content);
             addChat(resChat);
             getThread();
         }catch(err){
@@ -89,7 +90,7 @@ export default function Chat(){
                     </select>
                 </div>
                 </>:null}
-                <i className="fa-solid fa-ellipsis icon"></i>
+                {user?<img src={user.picture} className="nav-img"></img>:<i class="fa-solid fa-circle-user nav-i"></i>}
             </div>
             {Message==="No error"?null:<ErrorBox/>}
             <div className="main-area">

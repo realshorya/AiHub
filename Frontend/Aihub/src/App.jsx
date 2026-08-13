@@ -22,6 +22,7 @@ function App() {
   let[loader,setLoader]=useState(false);
   let[Message,setMessage]=useState("No error");
   let[show,setShow]=useState(window.innerWidth >= 1000);
+  let[reply,setReply]=useState(null);
 
   
   const getThread = async()=>{
@@ -57,6 +58,7 @@ function App() {
     Message,setMessage,
     getThread,
     show,setShow,
+    reply,setReply,
   };
 
   useEffect(() => {
