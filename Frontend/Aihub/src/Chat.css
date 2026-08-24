@@ -211,12 +211,12 @@
 }
 @media (min-width: 400px) and (max-width:550px){
     .bottom textarea{
-        width:18rem;
+        width:15rem;
         padding-right:56%;
         font-size:0.9rem;
     }
     .chat-btns{
-        margin-left:-12.6rem;
+        margin-left:-12.9rem;
     }
     .chat{
         width:100%;
@@ -248,13 +248,13 @@
         font-size:0.7rem;
     }
     .bottom textarea{
-        width:14rem;
+        width:13rem;
         height:0.2rem;
         padding-right:50%;
         font-size:0.8rem;
     }
     .chat-btns{
-        margin-left:-14.1rem;
+        margin-left:-14.3rem;
     }
     .bottom p{
         font-size:0.6rem;
