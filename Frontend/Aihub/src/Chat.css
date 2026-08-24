@@ -109,12 +109,12 @@
 }
 .chat-btns{
     height:2rem;
-    width:16rem;
+    width:20rem;
     display:flex;
     align-items:center;
     justify-content:flex-end;
     gap:10px;
-    margin-left:-12.7rem;
+    margin-left:-15.7rem;
     margin-top:0.5rem;
 }
 .send-btn{
@@ -159,7 +159,9 @@
         width:40rem;
         padding-right:30%
     }
-    
+    .chat-btns{
+        margin-left:-15.8rem;
+    }
     .nav-bar{
         width:100%;
     }
@@ -186,7 +188,7 @@
         font-size:0.9rem;
     }
     .chat-btns{
-        margin-left:-12.5rem;
+        margin-left:-14.5rem;
     }
     .chat{
         width:100%;
@@ -214,7 +216,7 @@
         font-size:0.9rem;
     }
     .chat-btns{
-        margin-left:-12.4rem;
+        margin-left:-12.6rem;
     }
     .chat{
         width:100%;
@@ -252,7 +254,7 @@
         font-size:0.8rem;
     }
     .chat-btns{
-        margin-left:-10.9rem;
+        margin-left:-14.1rem;
     }
     .bottom p{
         font-size:0.6rem;
