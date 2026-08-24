@@ -5,6 +5,7 @@
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
+  position:relative;
 }
 .nav-bar{
     height:3rem;
@@ -143,9 +144,9 @@
     font-size:0.8rem;
     color:rgb(255,255,255,0.7);
 }
-@media (min-width: 1300px) and (max-width:1200px){
+@media(max-width:1300px){
     .chat{
-        width:75%
+        width:100%
     }
 }
 @media (min-width: 1000px) and (max-width:1200px){
@@ -153,7 +154,7 @@
         width:40rem;
     }
 }
-@media (min-width: 750px) and (max-width:1000px){
+@media (min-width: 750px) and (max-width:1300px){
     .bottom textarea{
         width:40rem;
         padding-right:30%

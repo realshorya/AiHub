@@ -10,6 +10,7 @@
     margin:1rem 2rem;
     padding-left:1rem;
     position:absolute;
+    top:3rem;
 }
 .error-info{
     display:flex;
@@ -21,9 +22,9 @@
 .error-cross i{
     margin:1rem;
 }
-@media (min-width: 1000px) and (max-width:1200px){
+@media (min-width: 1000px){
     .error-box{
-        width:70%;
+        width:95%;
         margin-left:0.6rem;
     }
 }

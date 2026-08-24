@@ -66,7 +66,7 @@ function App() {
 
       const timer = setTimeout(() => {
           setMessage("No error");
-      }, 5000);
+      }, 1000000);
 
       return () => clearTimeout(timer);
   }, [Message]);
@@ -84,7 +84,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1000) {
+      if (window.innerWidth >= 1300) {
         setShow(true);
       } else {
         setShow(false);
