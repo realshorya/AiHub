@@ -66,7 +66,7 @@ function App() {
 
       const timer = setTimeout(() => {
           setMessage("No error");
-      }, 1000000);
+      }, 5000);
 
       return () => clearTimeout(timer);
   }, [Message]);
