@@ -19,18 +19,18 @@ export default function sidebar(){
     return(
         <div className="sidebar" style={{display:show?"block":"none"}}>
             <div className="head">
-                <i class="fa-solid fa-hexagon-nodes icon"></i>
+                <i className="fa-solid fa-hexagon-nodes icon"></i>
                 <h1 className="name">AiHub</h1>
                 <h1 className="name-extra">{modelstatus?` - ${model}`:` - ${currmodel}`}</h1>
                 <i className="fa-solid fa-bars icon nav-close-icon" onClick={()=> setShow(!show)}></i>
             </div>
             <div className="functions">
-                <a onClick={()=>{setStatus(true);setChats([]);setIdthread(uuidv4());setModelstatus(true);}}><i class="fa-regular fa-pen-to-square"></i>New Chat</a>
-                <a><i class="fa-solid fa-spinner"></i>Upcoming Features</a>
+                <a onClick={()=>{setStatus(true);setChats([]);setIdthread(uuidv4());setModelstatus(true);}}><i className="fa-regular fa-pen-to-square"></i>New Chat</a>
+                <a><i className="fa-solid fa-spinner"></i>Upcoming Features</a>
             </div>
             {isAuthenticated?<RecentTab></RecentTab>:<Auth></Auth>}
             <div className="user-info">
-                {user?<img src={user.picture}></img>:<i class="fa-solid fa-circle-user"></i>}
+                {user?<img src={user.picture}></img>:<i className="fa-solid fa-circle-user"></i>}
                 <p>{user?user.name:"Guest"}</p>
                 {isAuthenticated ?<button className="auth-button-logout" onClick={logout}>Logout</button>:<p></p>}
             </div>

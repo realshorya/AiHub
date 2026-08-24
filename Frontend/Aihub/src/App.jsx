@@ -27,7 +27,7 @@ function App() {
   
   const getThread = async()=>{
     try{
-      console.log(`${import.meta.env.VITE_API_URL}/threads`);
+      //console.log(`${import.meta.env.VITE_API_URL}/threads`);
       const response = await fetch(`${import.meta.env.VITE_API_URL}/threads`,{
         method:"POST",
         headers:{

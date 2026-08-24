@@ -9,13 +9,13 @@ export default function Template(){
             <p>Start new chat to clear your doubts.</p>
             <div className="suggestion">
                 <div className="item">
-                    <i class="fa-solid fa-hexagon-nodes"></i>
+                    <i className="fa-solid fa-hexagon-nodes"></i>
                     Which Ai model want?</div>
                 <div className="item" onClick={()=>{setStatus(true);setChats([]);setIdthread(uuidv4());setModelstatus(true);}}>
-                    <i class="fa-solid fa-pencil"></i>
+                    <i className="fa-solid fa-pencil"></i>
                     Write or edit</div>
                 <div className="item hide">
-                    <i class="fa-solid fa-globe"></i>
+                    <i className="fa-solid fa-globe"></i>
                     Look something up</div>
             </div>
         </div>

@@ -2,9 +2,12 @@
   height:100%;
   width:83%;
   background-color:rgb(46,46,46);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
 }
 .nav-bar{
-    height:7%;
+    height:3rem;
     width:100%;
     background-color:rgb(46, 46, 46);
     color:rgb(255,255,255,0.7);
@@ -12,9 +15,10 @@
     display:flex;
     justify-content:space-between;
     position:sticky;
+    margin-bottom:auto;
 }
 .main-area{
-    height:81%;
+    height:83%;
     width:100%;
     background-color:rgb(46, 46, 46);
     color:white;
@@ -33,14 +37,15 @@
 }
 .logo-area{
     display:flex;
+    align-items:center;
 }
 .logo-name{
     font-size:1.5rem;
-    margin: 0.8rem 0 0.8rem 1.5rem;
+    margin-left:1rem;
 }
 .logo-name-extra{
     font-size:1.5rem;
-    margin:0.8rem 0.5rem;
+    padding-left:0.5rem;
 }
 .models{
     margin-top:0.2rem;
@@ -55,6 +60,13 @@
     border-radius:0.5rem;
     font-size:1rem;
 }
+.nav-user{
+    display:flex;
+    align-items:center;
+}
+.nav-user h5{
+    font-weight:600;
+}
 .nav-img{
     width:2rem;
     height:2rem;
@@ -67,7 +79,7 @@
     margin:0.5rem;
 }
 .bottom{
-    height:12%;
+    height:6rem;
     width:100%;
     background-color:rgb(46,46,46);
     color:white;
@@ -77,41 +89,76 @@
     justify-content:space-evenly;
     align-items:center
 }
-.bottom input{
+.bottom form {
+    display: flex;
+    align-items: center;
+}
+.bottom textarea{
     width:45rem;
+    height:1rem;
+    scrollbar-width:none;
     background-color:rgb(56,56,56);
     color:rgb(255,255,255);
     margin-top:0.5rem;
-    padding:0.7rem 2rem;
+    padding:1rem 1rem;
+    padding-right:30%;
     border-radius:2rem;
     border:1px solid black;
+    font-size:1rem;
 }
-.bottom button{
+.chat-btns{
+    height:2rem;
+    width:16rem;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    margin-left:-12.7rem;
+    margin-top:0.5rem;
+}
+.send-btn{
     background-color:lightgrey;
-    padding:0.4rem 1rem;
-    border-radius:2rem;
-    margin-left:-3.6rem;
+    padding:0.7rem 1.3rem;
+    border-radius:1.5rem;
+    /*margin-left:-4rem;
+    margin-bottom:-0.5rem;*/
     border:none;
+}
+.model-btn{
+    background:transparent;
+    color:rgba(255,255,255,0.7);
+    font-size:1rem;
+    /*padding:0.7rem 1rem;*/
+    border:none;
+    outline:none;
+}
+.model-btn option {
+  background-color: #333;
+  color: white;
+  font-size:1rem;
+  padding:0 4rem;
 }
 .bottom p{
     margin-top:0;
     font-size:0.8rem;
     color:rgb(255,255,255,0.7);
 }
-@media (min-width: 1000px) and (max-width:1200px){
+@media (min-width: 1300px) and (max-width:1200px){
     .chat{
         width:75%
     }
 }
 @media (min-width: 1000px) and (max-width:1200px){
-    .bottom input{
+    .bottom textarea{
         width:40rem;
     }
 }
 @media (min-width: 750px) and (max-width:1000px){
-    .bottom input{
-        width:30rem;
+    .bottom textarea{
+        width:40rem;
+        padding-right:30%
     }
+    
     .nav-bar{
         width:100%;
     }
@@ -131,9 +178,14 @@
         display:block;
     }
 }
-@media (min-width: 500px) and (max-width:750px){
-    .bottom input{
-        width:20rem;
+@media (min-width: 550px) and (max-width:750px){
+    .bottom textarea{
+        width:27rem;
+        padding-right:41%;
+        font-size:0.9rem;
+    }
+    .chat-btns{
+        margin-left:-12.5rem;
     }
     .chat{
         width:100%;
@@ -154,9 +206,55 @@
         display:block;
     }
 }
-@media (min-width: 300px) and (max-width:550px){
-    .bottom input{
-        width:15rem;
+@media (min-width: 400px) and (max-width:550px){
+    .bottom textarea{
+        width:18rem;
+        padding-right:56%;
+        font-size:0.9rem;
+    }
+    .chat-btns{
+        margin-left:-12.4rem;
+    }
+    .chat{
+        width:100%;
+    }
+    .logo{
+        font-size:1.2rem;
+    }
+    .logo-name{
+        margin-left:0;
+    }
+    .logo-name-extra{
+        display:none;
+    }
+    .models{
+    width:10rem;
+    }
+    .nav-open-icon{
+        display:block;
+    }
+    
+}
+@media(max-width:400px){
+    .model-btn{
+        width:6rem;
+        font-size:0.7rem;
+    }
+    .send-btn{
+        padding:0.4rem 1rem;
+        font-size:0.7rem;
+    }
+    .bottom textarea{
+        width:14rem;
+        height:0.2rem;
+        padding-right:50%;
+        font-size:0.8rem;
+    }
+    .chat-btns{
+        margin-left:-10.9rem;
+    }
+    .bottom p{
+        font-size:0.6rem;
     }
     .chat{
         width:100%;

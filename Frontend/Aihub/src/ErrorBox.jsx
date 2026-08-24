@@ -6,11 +6,11 @@ export default function ErrorBox(){
     return(
     <div className="error-box">
         <div className="error-info">
-            <i class="fa-solid fa-circle-exclamation"></i>
+            <i className="fa-solid fa-circle-exclamation"></i>
             <p>{Message}</p>
         </div>
         <div className="error-cross">
-            <i class="fa-solid fa-x" onClick={()=> setMessage("No error")}></i>
+            <i className="fa-solid fa-x" onClick={()=> setMessage("No error")}></i>
         </div>
     </div>
     )

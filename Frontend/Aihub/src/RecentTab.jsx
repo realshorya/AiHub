@@ -4,7 +4,7 @@ import './RecentTab.css';
 
 export default function RecentTab(){
 
-    const {thread,setStatus,setCurrchat,setIdthread,setCurrmodel,setModelstatus,Message,setMessage,getThread,model,setModel} = useContext(MyContext);
+    const {thread,setStatus,setCurrchat,setIdthread,setCurrmodel,setModelstatus,Message,setMessage,getThread,model,setModel,setShow,show} = useContext(MyContext);
 
     let handlestatus=()=>{
         setStatus(true);
@@ -45,7 +45,7 @@ export default function RecentTab(){
                 {thread.map((data,idx)=>(
                     <div className="history-info" key={idx}>
                         <div className="title" onClick={()=>{currThread(data.threadId);handlestatus();}}>{data.title}</div>
-                        <div className="del" onClick={()=>deleteThread(data.threadId)}><i class="fa-regular fa-trash-can"></i></div>
+                        <div className="del" onClick={()=>deleteThread(data.threadId)}><i className="fa-regular fa-trash-can"></i></div>
                     </div>))}
             </div>
             </>

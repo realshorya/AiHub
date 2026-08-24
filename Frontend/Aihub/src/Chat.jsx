@@ -74,23 +74,14 @@ export default function Chat(){
         <div className="chat">
             <div className="nav-bar">
                 <div className="logo-area">
-                    <i class="fa-solid fa-bars icon nav-open-icon" onClick={()=> setShow(!show)}></i>
+                    <i className="fa-solid fa-bars icon nav-open-icon" onClick={()=> setShow(!show)}></i>
                     <h1 className="logo-name">AiHub</h1>
                     <h1 className="logo-name-extra">{modelstatus?` - ${model}`:` - ${currmodel}`}</h1>
                 </div>
-                {modelstatus?
-                <>
-                <div className="models">
-                    <select defaultValue={model} onChange={(e)=>{setModel(e.target.value)}} required>
-                        <option value="Select a model">Select a model</option>
-                        <option value="ChatGPT">ChatGPT</option>
-                        <option value="Gemini">Gemini</option>
-                        <option value="Claude">Claude</option>
-                        <option value="Deepseek">DeepSeek</option>
-                    </select>
+                <div className="nav-user">
+                    <h5>{user?user.name:"Guest"}</h5>
+                    {user?<img src={user.picture} className="nav-img"></img>:<i className="fa-solid fa-circle-user nav-i"></i>}
                 </div>
-                </>:null}
-                {user?<img src={user.picture} className="nav-img"></img>:<i class="fa-solid fa-circle-user nav-i"></i>}
             </div>
             {Message==="No error"?null:<ErrorBox/>}
             <div className="main-area">
@@ -99,8 +90,18 @@ export default function Chat(){
                 {status===true?
             <div className="bottom">
                 <form onSubmit={handleSubmit}>
-                    <input placeholder="Search Query" value={query} onChange={(e)=>{setQuery(e.target.value)}} required></input>
-                    <button disabled={model === "Select a model"}><i class="fa-regular fa-paper-plane"></i></button>
+                    <textarea placeholder="Search Query" value={query} onChange={(e)=>{setQuery(e.target.value)}} required></textarea>
+                    <div className="chat-btns">
+                        {modelstatus?
+                        <select className="model-btn" defaultValue={model} onChange={(e)=>{setModel(e.target.value);console.log(model)}} required>
+                            <option value="Select a model">Select Model</option>
+                            <option value="ChatGPT">ChatGPT</option>
+                            <option value="Gemini">Gemini</option>
+                            <option value="Claude">Claude</option>
+                            <option value="Deepseek">DeepSeek</option>
+                        </select>:null}
+                        <button className="send-btn" disabled={model === "Select a model"}><i className="fa-regular fa-paper-plane"></i></button>
+                    </div>
                 </form>
                 <p>AiHub can make mistake. Check important info.</p>
             </div>:null}

@@ -1,5 +1,5 @@
 .sidebar{
-  height:100%;
+  height:100dvh;
   width:17%;
   background-color:rgb(46,46,46);
   color:rgb(255,255,255,0.7);
@@ -7,13 +7,15 @@
   display:flex;
   display:block;
   flex-direction:column;
+  /*background-color:greenyellow;*/
+  position:relative;
 }
 .head{
     width:100%;
-    height:7%;
     background-color:rgb(46,46,46);
     display:flex;
     justify-content:space-between;
+    flex-shrink:0;
 }
 .icon{
     padding:1rem;
@@ -52,7 +54,11 @@
     margin:0 0.3rem 0 0.6rem;
 }
 .user-info{
-    height:8%;
+    /*position:absolute;
+    bottom:0;
+    background-color:purple;*/
+    height:3.2rem;
+    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -91,7 +97,7 @@
 }
 @media (min-width: 1000px) and (max-width:1200px){
     .sidebar{
-        width:25%
+        width:20%
     }
 }
 @media (min-width: 300px) and (max-width:1000px){
