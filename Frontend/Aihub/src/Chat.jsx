@@ -93,7 +93,7 @@ export default function Chat(){
                     <textarea placeholder="Search Query" value={query} onChange={(e)=>{setQuery(e.target.value)}} required></textarea>
                     <div className="chat-btns">
                         {modelstatus?
-                        <select className="model-btn" defaultValue={model} onChange={(e)=>{setModel(e.target.value);console.log(model)}} required>
+                        <select className="model-btn" defaultValue={model} onChange={(e)=>{setModel(e.target.value)}} required>
                             <option value="Select a model">Select Model</option>
                             <option value="ChatGPT">ChatGPT</option>
                             <option value="Gemini">Gemini</option>

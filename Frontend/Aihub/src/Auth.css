@@ -1,6 +1,6 @@
 .auth-box{
     width:100%;
-    height:68%;
+    height: calc(100dvh - 7.2rem - 7rem);;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -32,4 +32,10 @@
 .login-title {
     font-weight:500;
     margin:0.5rem;
+}
+@media (min-width: 1291px) and (max-width:1370px){
+    .auth-button{
+        margin:0 0.8rem;
+        padding:0.3rem 0.7rem;
+    }
 }

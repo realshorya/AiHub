@@ -9,7 +9,7 @@ import './Sidebar.css'
 
 export default function sidebar(){
 
-    const {setStatus,setChats,setIdthread,setModelstatus,show,setShow,modelstatus,model,currmodel} = useContext(MyContext);
+    const {setStatus,setChats,setIdthread,setModelstatus,show,setShow,modelstatus,model,currmodel,setMessage} = useContext(MyContext);
     const {isLoading, isAuthenticated, error, loginWithRedirect: login, logout: auth0Logout, user} = useAuth0();
 
     const logout = () =>{
@@ -25,7 +25,7 @@ export default function sidebar(){
                 <i className="fa-solid fa-bars icon nav-close-icon" onClick={()=> setShow(!show)}></i>
             </div>
             <div className="functions">
-                <a onClick={()=>{setStatus(true);setChats([]);setIdthread(uuidv4());setModelstatus(true);}}><i className="fa-regular fa-pen-to-square"></i>New Chat</a>
+                <a onClick={()=>{setStatus(true);setChats([]);setIdthread(uuidv4());setModelstatus(true);setMessage("Choose an AI model below to start your conversation.");}}><i className="fa-regular fa-pen-to-square"></i>New Chat</a>
                 <a><i className="fa-solid fa-spinner"></i>Upcoming Features</a>
             </div>
             {isAuthenticated?<RecentTab></RecentTab>:<Auth></Auth>}
