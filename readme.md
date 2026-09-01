@@ -2,6 +2,8 @@
 
 > A modern AI platform that brings multiple powerful AI models together in one place.
 
+🌐 **Use AiHub online:** [Visit the live application](https://ai-hub-sepia.vercel.app)
+
 AiHub is a React-based AI application built with Vite that allows users to interact with different AI models through a single, clean interface. Users can chat with multiple AI models, save their conversations, and access previous chats through the chat history.
 
 ## ✨ Features
@@ -117,6 +119,12 @@ Once both servers are running, open the local URL shown in the Vite terminal to 
 - The frontend and backend are intentionally separated in different folders.
 - The backend handles AI requests, chat persistence, and session logic.
 - The frontend handles the UI and calls the backend API for chat history and model responses.
+
+## 🌐 Live Demo
+
+You can use the deployed version of AiHub here:
+
+👉 [Open AiHub](https://ai-hub-sepia.vercel.app)
 
 ## 💡 How It Works
 
