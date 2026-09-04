@@ -1,4 +1,4 @@
-# 🤖 AiHub
+# 🤖 AiHub - One Hub. Many AIs.
 
 > A modern AI platform that brings multiple powerful AI models together in one place.
 
